@@ -73,4 +73,4 @@ The website is hosted on [Render](https://render.com/) with deployment settings 
     ```
     http://localhost:5000
     ```
-4. Follow the same instructions as in Step-2(Option 1) to upload the CSV file and complete the required actions on the webpage.
+4. Follow the same instructions as in Step-3(Option 1) to upload the CSV file and complete the required actions on the webpage.
