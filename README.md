@@ -13,14 +13,16 @@ The `Dockerfile` contains the instructions for building the Docker image for the
 
 To pull the Docker image for this Flask application, use the following command:
 
+```sh
 docker pull kirthanabalaji/task-21bce5129:latest
+```
 
 ### Requirements
 
 The `requirements.txt` file lists all the Python packages and their versions required for the Flask application to run. Ensure that these packages are installed in the Docker container.
 
 
-## Testing Instructions
+## Testing Instructions (Option 1)
 
 The website is hosted on [Render](https://render.com/) and deployment settings were executed using the `Dockerfile`. To easily test the application, please follow these steps:
 
@@ -35,3 +37,24 @@ The website is hosted on [Render](https://render.com/) and deployment settings w
    
 4. **Complete Required Actions:**
    - Make sure all mandatory selections and fields are completed as specified on the webpage.
+
+
+## Testing Instructions (Option 2)
+
+1. Pull the Docker image from the repository:
+
+    ```sh
+    docker pull kirthanabalaji/task-21bce5129:latest
+    ```
+
+2. Run the Docker container:
+
+    ```sh
+    docker run -d -p 5000:5000 kirthanabalaji/task-21bce5129
+    ```
+
+3. Visit the application in your web browser at:
+
+    ```
+    http://localhost:5000
+    ```
