@@ -22,7 +22,7 @@ The `requirements.txt` file lists all the Python packages and their versions req
 
 ## Testing Instructions
 
-The website was hosted on [Render](https://render.com/) , and deployment settings were executed using the `Dockerfile`. To easily test the application, please follow these steps:
+The website is hosted on [Render](https://render.com/) and deployment settings were executed using the `Dockerfile`. To easily test the application, please follow these steps:
 
 1. **Visit the Website:**
  [Link](https://tanx-fi.onrender.com/)
