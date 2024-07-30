@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Results</h1>
+
+        {% if 'monthly_revenue' in selected_operation %}
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    Monthly Revenue
+                </div>
+                <div class="card-body">
+                    {{ outputs['monthly_revenue'] | safe }}
+                    <a href="{{ url_for('download_file', filename='monthly_revenue') }}" class="btn btn-primary mt-2">Download as CSV</a>
+                </div>
+            </div>
+        {% endif %}
+
+        {% if 'product_revenue' in selected_operation %}
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    Product Revenue
+                </div>
+                <div class="card-body">
+                    {{ outputs['product_revenue'] | safe }}
+                    <a href="{{ url_for('download_file', filename='product_revenue') }}" class="btn btn-primary mt-2">Download as CSV</a>
+                </div>
+            </div>
+        {% endif %}
+
+        {% if 'customer_revenue' in selected_operation %}
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    Customer Revenue
+                </div>
+                <div class="card-body">
+                    {{ outputs['customer_revenue'] | safe }}
+                    <a href="{{ url_for('download_file', filename='customer_revenue') }}" class="btn btn-primary mt-2">Download as CSV</a>
+                </div>
+            </div>
+        {% endif %}
+
+        {% if 'top_customers' in selected_operation %}
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    Top {{ top_x }} Customers
+                </div>
+                <div class="card-body">
+                    {{ outputs['top_customers'] | safe }}
+                    <a href="{{ url_for('download_file', filename='top_customers') }}" class="btn btn-primary mt-2">Download as CSV</a>
+                </div>
+            </div>
+        {% endif %}
+
+        <a href="/" class="btn btn-secondary mt-4">Upload New File</a>
+    </div>
+
+    <div class="footer mt-5">
+        <p>Developed by <a href="https://www.linkedin.com/in/kirthana-b-20095421b/" target="_blank">Kirthana (21BCE5129)</a></p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
