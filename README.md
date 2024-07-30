@@ -54,7 +54,7 @@ The website is hosted on [Render](https://render.com/) with deployment settings 
 4. **Complete Required Actions:**
    - Make sure all mandatory selections and fields are completed as specified on the webpage.
 
-## Testing Instructions (Option 2)
+## Testing Instructions (Option 2 - using DockerImage)
 
 1. Pull the Docker image from the repository:
 
